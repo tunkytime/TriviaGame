@@ -17,3 +17,7 @@
 	cursor: pointer;
 }
 
+#show-answer {
+	background: black;
+	color: white;
+}
