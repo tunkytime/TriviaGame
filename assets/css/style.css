@@ -1,0 +1,19 @@
+.col-md-10 {
+	background: #8ADACF;
+	padding: 20px;
+}
+
+/* ANSWER DIV */
+#answer-container {
+	margin: 5px;
+}
+
+.answer {
+	padding: 5px;
+}
+
+.answer:hover {
+	background: #5EB5A9;
+	cursor: pointer;
+}
+
