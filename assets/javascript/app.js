@@ -7,6 +7,7 @@ $(document).ready(function () {
 	var incorrectCount = 0;
 	var unansweredCount = 0;
 	var questionNum = 0;
+	var question = "";
 
 	var questionsArr = [{
 			question: "Question #1",
@@ -55,13 +56,31 @@ $(document).ready(function () {
 		};
 	};
 
+	// // Generate list of 20 questions and answers from API | Category = Science: Computers
+	// var queryURL = "https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple";
+	// $.ajax({
+	// 	url: queryURL,
+	// 	method: "GET"
+	// }).then(function (response) {
+	// 	newQuestion(response);
+	// });
+
+	// var newQuestion = function (data) {
+	// 	console.log(data.results[questionNum].question)
+	// 	console.log(`Correct Answer: ${data.results[questionNum].correct_answer}`)
+	// 	console.log(data.results[questionNum].incorrect_answers[0]);
+	// 	console.log(data.results[questionNum].incorrect_answers[1]);
+	// 	console.log(data.results[questionNum].incorrect_answers[2]);
+	// };
+	// // end of database question functions
+
 	// Display the first question
 	function generateQuestion(array) {
 		var question = array[questionNum].question;
 		$("#question").text(question);
 	};
 
-	// Display the correct answer and dummy answer's associated with each question
+	// Display the correct answer and incorrect answer's associated with each question
 	function generateAnswers(array) {
 		var indexCorrect = array[questionNum].choices.indexOf(array[questionNum].correct)
 		var correctAnswer = array[questionNum].choices[indexCorrect];
@@ -90,6 +109,11 @@ $(document).ready(function () {
 			showAnswer();
 			stop();
 			questionNum++;
+
+			newQuestion = function (data) {
+				console.log(data.results[questionNum].question)
+			};
+
 			setTimeout(resetTimer, 2000);
 			setTimeout(run, 2000);
 		});
@@ -172,22 +196,4 @@ $(document).ready(function () {
 	run();
 	generateQuestion(questionsArr);
 	generateAnswers(questionsArr);
-});
-
-
-
-// Generate list of 20 questions and answers from API | Category = Science: Computers
-function databaseQuestions(data) {
-
-	for (var i = 0; i < data.results.length; i++) {
-		console.log(data.results[i]);
-	}
-}
-
-var queryURL = "https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple";
-$.ajax({
-	url: queryURL,
-	method: "GET"
-}).then(function (response) {
-	databaseQuestions(response);
 });
