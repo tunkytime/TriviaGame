@@ -173,3 +173,21 @@ $(document).ready(function () {
 	generateQuestion(questionsArr);
 	generateAnswers(questionsArr);
 });
+
+
+
+// Generate list of 20 questions and answers from API | Category = Science: Computers
+function databaseQuestions(data) {
+
+	for (var i = 0; i < data.results.length; i++) {
+		console.log(data.results[i]);
+	}
+}
+
+var queryURL = "https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple";
+$.ajax({
+	url: queryURL,
+	method: "GET"
+}).then(function (response) {
+	databaseQuestions(response);
+});
