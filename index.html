@@ -2,32 +2,36 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <title>Trivia Game</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<title>Trivia Game</title>
 </head>
 
 <body>
-	<div class="container mt-3">	
+	<div class="container mt-3">
 		<div class="row">
 			<div class="col-md-10 mx-auto text-center">
 				<h1 class="mb-4">Trivia Game</h1>
 				<div class="main-section">
 					<div id="gameplay">
-						<h4 class="mb-3">Time Remaining: <span id="show-time">3</span> Seconds</h4>
-						<strong><span id="question">Question goes here:</span></strong><br>
-						<div id="answer-container">
-						</div>
+						<h4 class="mb-3">
+							Time Remaining: <span id="show-time">3</span> Seconds
+						</h4>
+						<strong><span id="question">Question goes here:</span></strong>
+						<br />
+						<div id="answer-container"></div>
+						<div id="show-answer"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-<script src="assets/javascript/app.js"></script>
+	<script src="assets/javascript/app.js"></script>
 </body>
+
 </html>

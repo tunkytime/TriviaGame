@@ -8,11 +8,11 @@
 	margin: 5px;
 }
 
-.answer {
+.choice {
 	padding: 5px;
 }
 
-.answer:hover {
+.choice:hover {
 	background: #5EB5A9;
 	cursor: pointer;
 }
