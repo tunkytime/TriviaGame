@@ -1,9 +1,46 @@
-.col-md-10 {
-	background: #8ADACF;
-	padding: 20px;
+/* HEADER */
+
+#logo {
+	width: 100%;
+	margin-top: -40px;
+	margin-bottom: -40px;
 }
 
-/* ANSWER DIV */
+h1 {
+	color: white;
+	letter-spacing: 5px;
+	padding: 10px;
+	background: black;
+	margin-bottom: -20px;
+	border-radius: 5px;
+}
+
+/* BODY */
+
+body {
+	background-image: url(../images/bg.jpg);
+	font-family: 'Overpass', sans-serif;
+}
+
+/* Hidden until "Start Game" button clicked */
+#gameplay {
+	display: none;
+}
+
+/* QUESTION CONTAINER */
+
+.main-section {
+	background: white;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+/* Question font */
+#question {
+	color: #4F3F97;
+}
+
+/* div for choices */
 #answer-container {
 	margin: 5px;
 }
@@ -13,11 +50,31 @@
 }
 
 .choice:hover {
-	background: #5EB5A9;
+	background: #4F3F97;
 	cursor: pointer;
+	color: white;
 }
 
+/* Display correct answer */
 #show-answer {
+	display: none;
 	background: black;
 	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+/* BUTTONS */
+
+.btn {
+	background: #4F3F97;
+}
+
+.btn:hover {
+	background: black;
+}
+
+.btn:active {
+	background: #1A0E5A;
 }
