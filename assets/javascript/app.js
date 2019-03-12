@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // VARIABLES //
   var startTime = 20;
   var timeLeft = startTime;
@@ -9,8 +9,7 @@ $(document).ready(function() {
   var questionNum = 0;
   var timeout = 4000;
 
-  var questionsArr = [
-    {
+  var questionsArr = [{
       question: `Complete this line by the Joker: "If you're good at something, never do it for ________."`,
       correct: "Free",
       choices: ["Free", "Fun", "Yourself", "Money"],
@@ -108,7 +107,7 @@ $(document).ready(function() {
       }
     }
     // On click events to register user's answer
-    $(".choice").on("click", function() {
+    $(".choice").on("click", function () {
       if ($(this).hasClass("correct")) {
         correctCount++;
         $(".choice").off("click");
@@ -187,7 +186,7 @@ $(document).ready(function() {
 			<p>Unanswered Questions: ${unansweredCount}</p>
 			<button id="reset-game" class="btn btn-block text-white">Play Again?</button>`);
 
-    $("#reset-game").on("click", function() {
+    $("#reset-game").on("click", function () {
       timeLeft = startTime;
       interval;
       correctCount = 0;
@@ -208,7 +207,7 @@ $(document).ready(function() {
   }
 
   // START THE GAME //
-  $("#start-game").on("click", function() {
+  $("#start-game").on("click", function () {
     $("#gameplay").css("display", "block");
     $("#start-game").empty();
     shuffleAnswers();

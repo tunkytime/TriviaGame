@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Overpass"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Trivia Game</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<title>Trivia Game</title>
-</head>
+  <body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <div class="mb-4">
+            <img id="logo" src="assets/images/logo.png" />
+            <h1>Trivia</h1>
+          </div>
+          <div id="start-game">
+            <div class="main-section">
+              <p>You will have 20 seconds to answer each question.</p>
+              <p>
+                Your final score will be displayed after you answer all the
+                questions.
+              </p>
+            </div>
+            <button class="btn btn-block text-white mt-2">Start Game</button>
+          </div>
+          <div id="gameplay">
+            <div class="main-section">
+              <h4 class="mb-3">
+                Time Remaining:
+                <strong><span id="show-time">3</span> Seconds</strong>
+              </h4>
+              <strong><span id="question"></span></strong>
+              <br />
+              <div id="answer-container"></div>
+              <div id="show-answer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<body>
-	<div class="container mt-3">
-		<div class="row">
-			<div class="col-md-6 text-center">
-				<div class="mb-4">
-					<img id="logo" src="assets/images/logo.png">
-					<h1>Trivia</h1>
-				</div>
-				<div id="start-game">
-					<button class="btn btn-block text-white">Start Game</button>
-				</div>
-				<div id="gameplay">
-					<div class="main-section">
-						<h4 class="mb-3">
-							Time Remaining: <strong><span id="show-time">3</span> Seconds</strong>
-						</h4>
-						<strong><span id="question"></span></strong>
-						<br />
-						<div id="answer-container"></div>
-						<div id="show-answer"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script src="assets/javascript/app.js"></script>
-</body>
-
+    <script src="assets/javascript/app.js"></script>
+  </body>
 </html>
